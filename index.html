@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+      
 	<div class="container">
 		<h1>VarBR - Análise de pênaltis</h1>
 		<label>Selecione os times:</label>
@@ -107,8 +108,16 @@
 			<!-- As opções serão adicionadas dinamicamente via JavaScript -->
 		</select>
 
-		<button id="submit-btn" disabled>Análise do VAR</button>
+        <div class="buttons-container">
+            
+            <button class = "but" id="help-btn">Como funciona?</button>
+            <button class = "but" id="submit-btn" disabled>Análise do VAR</button>
+          </div>
+          
+
+		
 		<p id="lance-text"></p>
+        <p id="help-text"></p>
 	</div>
 
 	<script src="script.js"></script>

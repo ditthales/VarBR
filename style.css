@@ -34,8 +34,8 @@ select {
 	border: 1px solid #ccc;
 }
 
-button {
-	display: block;
+#submit-btn {
+	display: inline-block;
 	margin: 0 auto;
 	padding: 10px 20px;
 	font-size: 16px;
@@ -47,8 +47,8 @@ button {
 	transition: all 0.3s ease;
 }
 
-button:disabled{
-    display: block;
+#submit-btn:disabled{
+    display: inline-block;
 	margin: 0 auto;
 	padding: 10px 20px;
 	font-size: 16px;
@@ -60,11 +60,11 @@ button:disabled{
 	transition: all 0.3s ease;
 }
 
-button:hover {
+#submit-btn:hover {
 	background-color: #0077A3;
 }
 
-button:hover:disabled {
+#submit-btn:hover:disabled {
 	background-color: #424a4d;
 }
 
@@ -80,4 +80,31 @@ select {
 font-size: 14px;
 }
 }
+  
+  .buttons-container {
+    display: flex;
+  }
+  
+  .but {
+	display: inline-block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #008CBA;
+    background-color: transparent;
+    color: #008CBA;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
+.but:hover{
+	background-color: #00698c;
+    color: #fff;
+    outline: none;
+}
+
+p#help-text{
+    margin-top: 20px;
+}
+  

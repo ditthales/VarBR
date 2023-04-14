@@ -2,8 +2,11 @@ const time1 = document.querySelector('#time1');
 const time2 = document.querySelector('#time2');
 const lance = document.querySelector('#lance');
 const lanceText = document.querySelector('#lance-text');
+const helpText = document.querySelector('#help-text');
 const submitBtn = document.querySelector('#submit-btn');
-const timesNordestinos = ["abc", "bahia", "fortaleza", "ceará", "crb", "sampaio", "sport", "vitoria"]
+const helpBtn = document.querySelector('#help-btn');
+const timesNordestinos = ["abc", "bahia", "fortaleza", "ceará", "crb", "sampaio-correa", "sport", "vitoria"]
+let popup = true
 
 // Adiciona um manipulador de evento ao botão
 submitBtn.addEventListener('click', () => {
@@ -28,6 +31,19 @@ submitBtn.addEventListener('click', () => {
 		lanceText.textContent = 'Por favor, selecione um time';
 	}
 });
+
+helpBtn.addEventListener('click', () => {
+    if (popup){
+        helpText.textContent = "O algoritmo leva em consideração normas internas da CBF que orientam que times cuja sede está localizada em rua que possua o CEP iniciando em 4, 5 ou 6 devem levar desvantagem em lances de avaliação do VAR."
+        popup = false
+        helpBtn.textContent = "Ocultar explicação"
+    }else{
+        helpText.textContent = ""
+        popup = true
+        helpBtn.textContent = "Como funciona?"
+    }
+    
+})
 
 // Adiciona um manipulador de evento às caixas seletoras de time
 time1.addEventListener('change', updateLanceOptions);
