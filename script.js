@@ -21,12 +21,11 @@ submitBtn.addEventListener('click', () => {
             }else{
                 lanceText.textContent = `Lance precisa de revisão no vídeo`
             }
-            // lanceText.textContent = `O lance é a favor de ${lance.options[lance.selectedIndex].text}!`;
         }
 		
 	} else {
 		// Caso contrário, exibe uma mensagem de erro
-		lanceText.textContent = 'Selecione os times e o lance primeiro!';
+		lanceText.textContent = 'Por favor, selecione um time';
 	}
 });
 
